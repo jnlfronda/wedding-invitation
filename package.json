@@ -4,9 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href https://jnlfronda.github.io/wedding-invitation/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng deploy --base-href=/wedding-invitation/",
+    "deploydist": "npx angular-cli-ghpages --dir=dist/wedding-invitation"
   },
   "private": true,
   "packageManager": "npm@10.9.0",
