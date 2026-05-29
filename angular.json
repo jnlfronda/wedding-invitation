@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "fronda-rsvp": {
+    "wedding-invitation": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -59,10 +59,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "fronda-rsvp:build:production"
+              "buildTarget": "wedding-invitation:build:production"
             },
             "development": {
-              "buildTarget": "fronda-rsvp:build:development"
+              "buildTarget": "wedding-invitation:build:development"
             }
           },
           "defaultConfiguration": "development"

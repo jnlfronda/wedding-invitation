@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { WeddingRsvpComponent } from "./features/wedding-rsvp/wedding-rsvp";
 
 @Component({
