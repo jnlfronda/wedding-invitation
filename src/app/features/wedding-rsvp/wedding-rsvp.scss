@@ -1,0 +1,470 @@
+/* =====================================================
+   wedding-rsvp.component.scss
+===================================================== */
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  color: #374151;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 !important;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.wedding-page {
+  background: linear-gradient(to bottom, #fff1f2, #ffffff);
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.container-small {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 12px;
+  color: #f43f5e;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, #f43f5e, transparent 40%);
+  opacity: 0.1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.hero-title span {
+  color: #f43f5e;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+.event-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 32px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background: #fecdd3;
+}
+
+.label {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.story-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  align-items: center;
+  padding: 80px 24px;
+}
+
+.story-content h2,
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.story-content p {
+  line-height: 1.8;
+  color: #6b7280;
+}
+
+.story-card {
+  background: white;
+  padding: 32px;
+  border-radius: 32px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.quote-box {
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #ffe4e6, #fff1f2);
+}
+
+.ring {
+  font-size: 4rem;
+}
+
+.quote {
+  font-size: 1.2rem;
+}
+
+.schedule-section {
+  background: white;
+  padding: 80px 0;
+  border-top: 1px solid #ffe4e6;
+  border-bottom: 1px solid #ffe4e6;
+}
+
+.venue-map-section {
+  .map-container {
+    width: 100vw; // Full viewport width
+    max-width: 1200px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .map-container {
+      height: 400px;
+      max-width: 100vw;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .map-container {
+      height: 250px;
+    }
+  }
+}
+
+.venue-gallery {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 2rem 0;
+
+  img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid gray;
+    background: #fff;
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 90vw;
+      height: 180px;
+    }
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.schedule-card {
+  padding: 32px;
+  border-radius: 28px;
+  border: 1px solid #ffe4e6;
+  background: linear-gradient(to bottom, white, #fff1f2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-5px);
+}
+
+.time {
+  color: #f43f5e;
+  font-weight: 600;
+}
+
+.rsvp-section {
+  padding: 100px 24px;
+
+  .form-group label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+}
+
+.rsvp-card {
+  background: white;
+  border-radius: 32px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.rsvp-section .form-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  label {
+    margin-bottom: 0; // Remove bottom margin for horizontal alignment
+    min-width: 160px; // Adjust as needed for label width
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+/* Optional: Only apply flex for the "Will You Attend?" group */
+.rsvp-section .form-group:has(.radio-group) {
+  flex-direction: row;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 18px;
+  border: 1px solid #fecdd3;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #f43f5e;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Add this line to center horizontally */
+  align-items: center; /* Optional: center vertically */
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 18px;
+  border-radius: 20px;
+  background: #f43f5e;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #e11d48;
+}
+
+.wedding-page.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  min-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 0;
+  }
+
+  .event-card {
+    flex-direction: column;
+  }
+
+  .divider {
+    width: 80%;
+    height: 1px;
+  }
+
+  .rsvp-card {
+    padding: 32px 24px;
+  }
+}
+
+.section-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.35); // More transparent
+  backdrop-filter: blur(12px); // Adds blur effect
+  border-radius: 0;
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  z-index: 1000;
+  transform: translateY(40px);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-nav.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.section-nav a {
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.section-nav a:hover {
+  background: #ffe4e6;
+}
+
+.section-nav a svg {
+  display: block;
+  transition:
+    transform 0.2s,
+    filter 0.2s;
+}
+
+.section-nav a:hover svg {
+  transform: scale(1.2);
+  filter: drop-shadow(0 2px 8px #f43f5e33);
+}
+
+.snap-section,
+.hero-section,
+.story-section,
+.schedule-section,
+.rsvp-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
+  text-align: center; /* optional: center text */
+  padding: 0; /* remove extra padding if needed */
+}
+
+.snap-section,
+.hero-section,
+.story-section,
+.schedule-section,
+.rsvp-section {
+  overflow: hidden;
+}
