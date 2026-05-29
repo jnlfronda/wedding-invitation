@@ -34,7 +34,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -166,9 +165,8 @@ body {
 
 .venue-map-section {
   .map-container {
-    width: 100vw; // Full viewport width
-    max-width: 1200px;
-    height: 600px;
+    width: 50vw;
+    height: 680px;
     margin: 0 auto;
     border-radius: 1rem;
     overflow: hidden;
@@ -195,16 +193,21 @@ body {
 
   @media (max-width: 600px) {
     .map-container {
-      height: 250px;
+      max-width: 100%;
+    }
+    .map-container iframe,
+    .map-container img {
+      height: 200px;
     }
   }
 }
 
 .venue-gallery {
   display: flex;
-  gap: 1rem;
+  gap: 16px;
   justify-content: center;
   margin: 2rem 0;
+  align-items: center;
 
   img {
     width: 300px;
@@ -214,6 +217,15 @@ body {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     border: 1px solid gray;
     background: #fff;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(2);
+      transition: transform 0.7s ease;
+      z-index: 2;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    }
   }
 
   @media (max-width: 900px) {
@@ -223,6 +235,18 @@ body {
     img {
       width: 90vw;
       height: 180px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .venue-gallery {
+      gap: 8px;
+
+      img {
+        max-width: 100%;
+        min-width: 0;
+        flex: 1 1 100%;
+      }
     }
   }
 }
@@ -467,4 +491,43 @@ button:hover {
 .schedule-section,
 .rsvp-section {
   overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  .wedding-rsvp-container {
+    padding: 8px;
+  }
+  .venue-gallery {
+    gap: 8px;
+  }
+  .venue-gallery img {
+    max-width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+  .map-container {
+    max-width: 100%;
+    margin: 12px 0;
+  }
+  .map-container iframe,
+  .map-container img {
+    height: 180px;
+  }
+  form {
+    max-width: 100%;
+    gap: 10px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  p,
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 1rem;
+  }
 }
